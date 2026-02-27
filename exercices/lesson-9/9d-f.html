@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM (Document Object Model)</title>
+</head>
+<body>
+  <input type="text" class="js-input-name" placeholder="Enter your name" onkeydown="handCostKeydown(event)">
+
+  <button onclick=";
+  ">Submit</button>
+
+  <p class="js-message"></p>
+
+  <script>
+    function handCostKeydown(event) {
+      if (event.key === 'Enter') {
+        const inputElement = document.querySelector('.js-input-name');
+        document.querySelector('.js-message').innerHTML = `Your name is ${inputElement.value}`
+      }
+    }
+    
+  </script>
+</body>
+</html>

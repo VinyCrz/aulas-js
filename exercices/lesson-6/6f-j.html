@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice</title>
+</head>
+<body>
+    
+    <button onclick="
+        playGame('heads')
+    ">heads</button>
+    <button onclick="
+        playGame('tails')
+    ">tails</button>
+
+
+
+    <script>
+
+        function playGame (guess) {
+
+            let score = JSON.parse(localStorage.getItem('score')) || { 
+                wins: 0,
+                losses: 0
+            };
+
+            const randomNumber = Math.random();
+
+            // condicao ? expr1 : expr2
+
+            const result = randomNumber < 0.5 ? 'heads' : 'tails';
+            console.log(guess === result ? 'You win' : 'You lose');
+
+            if (result === guess) {
+                score.wins++;
+            } else {
+                score.losses++;
+            }
+            console.log(score);
+
+            localStorage.setItem('score', JSON.stringify(score));
+        }
+
+        /*
+        const randomNumber = Math.random();
+        let result = '';
+        const guess = 'heads';
+
+        if (randomNumber < 0.5) {
+            result = 'heads';
+        } else {
+            result = 'tails';
+        }
+
+        if (guess === result) {
+            console.log('You win');
+        } else {
+            console.log('You lose')
+        }
+        */
+
+    </script>
+</body>
+</html>

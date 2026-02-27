@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TESTE</title>
+
+  <style>
+    .cor-button {
+      background-color: rgb(230, 230, 230);
+      font-weight: bold;
+      border-radius: 7px;
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+      font-size: 20px;
+      padding: 10px 30px;
+    }
+
+    .is-toggled {
+      background-color: black;
+      color: white;
+    }
+
+  </style>
+
+
+</head>
+<body>
+  
+  <button class="'js-button cor-button" onclick="
+    changeColor('.js-button');
+    ">Gaming</button>
+  <button class="'js-button-2 cor-button" onclick="
+    changeColor('.js-button-2')
+  ">Music</button>
+  <button class="'js-button-3 cor-button" onclick="
+    changeColor('.js-button-3')
+  ">Tech</button>
+
+
+  <script>
+    function changeColor(selector) {
+
+      const button = document.querySelector(selector);
+      button.classList.toogle('is-toggled') 
+
+      }
+    
+
+
+  </script>
+
+
+</body>
+</html>
