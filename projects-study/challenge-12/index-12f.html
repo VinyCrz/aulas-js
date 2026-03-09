@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Functions</title>
+</head>
+<body>
+ 
+  <button class="js-add-button" onclick="
+    addButton();
+  ">Add to cart</button>
+
+  <p class="js-message"></p>
+
+  <script>
+
+    let timeoutId;
+
+    function addButton() {
+      const buttonAddCart = document.querySelector('.js-message')
+      buttonAddCart.innerHTML = 'Added';
+
+      clearTimeout(timeoutId);
+
+      timeoutId = setTimeout(function() {
+        buttonAddCart.innerHTML = '';
+      }, 2000)
+    }
+
+  </script>
+</body>
+</html>

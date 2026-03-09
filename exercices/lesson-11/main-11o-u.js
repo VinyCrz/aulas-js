@@ -44,21 +44,20 @@ function findIndex(array, word) {
 }
 */
 
-
+/*
 console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
 
 function removeEgg(foods) {
   const result = [];
-  let eggsRemoved = 0;
-  for (let i = 0; i < foods.length; i++) {
-    if (foods[i] === 'egg' && eggsRemoved < 2) {
-      eggsRemoved++;
+  let eggRemoved = 0;
+  for (i = foods.length - 1; i >= 0; i--){
+    if (foods[i] === 'egg' && eggRemoved < 2) {
+      eggRemoved++;
       continue
-    } 
-    result.push(foods[i]);
-    
     }
-    return result;
+  result.push(foods[i]);
+  }
+  return result;
 }
-
+*/
 
